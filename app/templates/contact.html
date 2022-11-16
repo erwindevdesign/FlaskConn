@@ -1,0 +1,11 @@
+{% extends './layout.html' %}
+<!-- heredar desde plantilla layout -->
+
+{% block title %}{{ data.title}}{% endblock %}
+
+{% block body %}
+<h1>{{ data.nombre }}</h1>
+<h2>Tu edad es: {{ data.age }}</h2>
+{% endblock %}
+
+<!-- contrucción de url dinamicas a traves de parametros -->

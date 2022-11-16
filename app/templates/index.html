@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <h1>Hola mx</h1>
-    <h1>{{ data.bienvenida }}</h1>
+{% extends './layout.html' %}
+<!-- heredar desde plantilla layout -->
 
-    <!-- bucle/iteración (for) para mostrar lista (ul) desde app.py -->
-    <ul>
-        {% for c in data.curse %}
-        <li>{{ c }}</li>
-        {% endfor %}
+{% block title %}{{ data.title}}{% endblock %}
 
-    </ul>
-
-
-</body>
-</html>
+{% block body %}
+<h1>Hola</h1>
+<h1>{{ data.bienvenida }}</h1>
+<!-- bucle/iteración (for) para mostrar lista (ul) desde app.py -->
+{% if data.course_numbers %}
+<ul>
+    {% for c in data.curse %}
+    <li>{{ c }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h2>There are not course.</h2>
+{% endif%}
+{% endblock %}
