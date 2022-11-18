@@ -145,7 +145,25 @@ if __name__=='__main__':
     app.run(debug=True,port=5000) # definite debug mode and port
 ~~~
 
+### Mysql database
 
+~~~MySQL
+
+CREATE DATABASE abaco;
+
+CREATE TABLE course (
+codigo INT PRIMARY KEY,
+nombre VARCHAR(80),
+credits int
+);
+
+INSERT INTO abaco.course (codigo, nombre, credits) VALUES ('183224', 'Matemática', '6');
+INSERT INTO course (codigo, nombre, credits) VALUES ('224981', 'Quimica', '5');
+INSERT INTO course (codigo, nombre, credits) VALUES ('274192', 'Lógica de programación', '6');
+INSERT INTO course (codigo, nombre, credits) VALUES ('274914', 'Educación Física', '3');
+INSERT INTO course (codigo, nombre, credits) VALUES ('323253', 'Física', '6');
+
+~~~
 
 ## Built With :hammer_and_wrench:
 
